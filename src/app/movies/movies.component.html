@@ -1,0 +1,792 @@
+<div class="main-box">
+
+  <div class="main-box">
+
+    <div class="movies-title">
+      <p>Em alta</p>
+      <div class="hidden-call">
+        <p>Ver tudo</p>
+        <img alt="Seta para ver tudo" src="../../assets/right-arrow.png" />
+      </div>
+    </div>
+    <div id="carouselIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselIndicators" data-slide-to="1"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="image col-6 col-sm-4 col-md-3 col-lg-2" id="1" (mouseenter)="mouseOver($event)"
+              (mouseleave)="mouseOut($event)">
+              <div
+                [style.background-image]="'url(' + 'https://image.tmdb.org/t/p/w500' + trendingMovies[19].poster_path + ')'">
+              </div>
+
+              <div *ngIf="image1" [class.card-info]="image1">
+                <div class="video">
+                  <iframe width="100%" height="200" [src]="trendingMovies[19].linkVideo" frameborder="0" allowfullscreen
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                </div>
+
+                <div class="icons">
+                  <div class="three-icons">
+                    <div class="play-icon">
+                      <img alt="Imagem de play" src="../../assets/play-button.png" />
+                    </div>
+                    <div>
+                      <img alt="Sinal de mais" src="../../assets/plus.png" />
+                    </div>
+                    <div>
+                      <img alt="Sinal de mais" src="../../assets/like.png" />
+                    </div>
+                  </div>
+                  <div class="drop-icon">
+                    <img alt="Sinal de lista" src="../../assets/arrow-down.png" />
+                  </div>
+                </div>
+                <div class="texts">
+                  <div class="texts-1">
+                    <p class="relevance">{{trendingMovies[19].vote_average | number:'1.2-2'}} Nota</p>
+                    <p>{{trendingMovies[19].adult ? +18 : -18}}</p>
+                    <p>{{trendingMovies[19].original_title.slice(0, 10)}} ...</p>
+                    <p>HD</p>
+                  </div>
+                  <div class="texts-2">
+                    <p>Peculiares * </p>
+                    <p> Alto-astral * </p>
+                    <p> Teen</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="image col-6 col-sm-4 col-md-3 col-lg-2" id="2" (mouseenter)="mouseOver($event)"
+              (mouseleave)="mouseOut($event)">
+              <div
+                [style.background-image]="'url(' + 'https://image.tmdb.org/t/p/w500' + trendingMovies[18].poster_path + ')'">
+              </div>
+
+              <div *ngIf="image2" [class.card-info]="image2">
+                <div class="video">
+                  <iframe width="100%" height="200" [src]="trendingMovies[18].linkVideo" frameborder="0" allowfullscreen
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                </div>
+
+                <div class="icons">
+                  <div class="three-icons">
+                    <div class="play-icon">
+                      <img alt="Imagem de play" src="../../assets/play-button.png" />
+                    </div>
+                    <div>
+                      <img alt="Sinal de mais" src="../../assets/plus.png" />
+                    </div>
+                    <div>
+                      <img alt="Sinal de mais" src="../../assets/like.png" />
+                    </div>
+                  </div>
+                  <div class="drop-icon">
+                    <img alt="Sinal de lista" src="../../assets/arrow-down.png" />
+                  </div>
+                </div>
+                <div class="texts">
+                  <div class="texts-1">
+                    <p class="relevance">{{trendingMovies[18].vote_average | number:'1.2-2'}} Nota</p>
+                    <p>{{trendingMovies[18].adult ? +18 : -18}}</p>
+                    <p>{{trendingMovies[18].original_title.slice(0, 10)}} ...</p>
+                    <p>HD</p>
+                  </div>
+                  <div class="texts-2">
+                    <p>Peculiares * </p>
+                    <p> Alto-astral * </p>
+                    <p> Teen</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="image col-6 col-sm-4 col-md-3 col-lg-2" id="3" (mouseenter)="mouseOver($event)"
+              (mouseleave)="mouseOut($event)">
+              <div
+                [style.background-image]="'url(' + 'https://image.tmdb.org/t/p/w500' + trendingMovies[17].poster_path + ')'">
+              </div>
+
+              <div *ngIf="image3" [class.card-info]="image3">
+                <div class="video">
+                  <iframe width="100%" height="200" [src]="trendingMovies[17].linkVideo" frameborder="0" allowfullscreen
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                </div>
+
+                <div class="icons">
+                  <div class="three-icons">
+                    <div class="play-icon">
+                      <img alt="Imagem de play" src="../../assets/play-button.png" />
+                    </div>
+                    <div>
+                      <img alt="Sinal de mais" src="../../assets/plus.png" />
+                    </div>
+                    <div>
+                      <img alt="Sinal de mais" src="../../assets/like.png" />
+                    </div>
+                  </div>
+                  <div class="drop-icon">
+                    <img alt="Sinal de lista" src="../../assets/arrow-down.png" />
+                  </div>
+                </div>
+                <div class="texts">
+                  <div class="texts-1">
+                    <p class="relevance">{{trendingMovies[17].vote_average | number:'1.2-2'}} Nota</p>
+                    <p>{{trendingMovies[17].adult ? +18 : -18}}</p>
+                    <p>{{trendingMovies[17].original_title.slice(0, 10)}} ...</p>
+                    <p>HD</p>
+                  </div>
+                  <div class="texts-2">
+                    <p>Peculiares * </p>
+                    <p> Alto-astral * </p>
+                    <p> Teen</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="image col-6 col-sm-4 col-md-3 col-lg-2" id="4" (mouseenter)="mouseOver($event)"
+              (mouseleave)="mouseOut($event)">
+              <div
+                [style.background-image]="'url(' + 'https://image.tmdb.org/t/p/w500' + trendingMovies[16].poster_path + ')'">
+              </div>
+
+              <div *ngIf="image4" [class.card-info]="image4">
+                <div class="video">
+                  <iframe width="100%" height="200" [src]="trendingMovies[16].linkVideo" frameborder="0" allowfullscreen
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                </div>
+
+                <div class="icons">
+                  <div class="three-icons">
+                    <div class="play-icon">
+                      <img alt="Imagem de play" src="../../assets/play-button.png" />
+                    </div>
+                    <div>
+                      <img alt="Sinal de mais" src="../../assets/plus.png" />
+                    </div>
+                    <div>
+                      <img alt="Sinal de mais" src="../../assets/like.png" />
+                    </div>
+                  </div>
+                  <div class="drop-icon">
+                    <img alt="Sinal de lista" src="../../assets/arrow-down.png" />
+                  </div>
+                </div>
+                <div class="texts">
+                  <div class="texts-1">
+                    <p class="relevance">{{trendingMovies[16].vote_average | number:'1.2-2'}} Nota</p>
+                    <p>{{trendingMovies[16].adult ? +18 : -18}}</p>
+                    <p>{{trendingMovies[16].original_title.slice(0, 10)}} ...</p>
+                    <p>HD</p>
+                  </div>
+                  <div class="texts-2">
+                    <p>Peculiares * </p>
+                    <p> Alto-astral * </p>
+                    <p> Teen</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="image col-6 col-sm-4 col-md-3 col-lg-2" id="5" (mouseenter)="mouseOver($event)"
+              (mouseleave)="mouseOut($event)">
+              <div
+                [style.background-image]="'url(' + 'https://image.tmdb.org/t/p/w500' + trendingMovies[15].poster_path + ')'">
+              </div>
+
+              <div *ngIf="image5" [class.card-info]="image5">
+                <div class="video">
+                  <iframe width="100%" height="200" [src]="trendingMovies[15].linkVideo" frameborder="0" allowfullscreen
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                </div>
+
+                <div class="icons">
+                  <div class="three-icons">
+                    <div class="play-icon">
+                      <img alt="Imagem de play" src="../../assets/play-button.png" />
+                    </div>
+                    <div>
+                      <img alt="Sinal de mais" src="../../assets/plus.png" />
+                    </div>
+                    <div>
+                      <img alt="Sinal de mais" src="../../assets/like.png" />
+                    </div>
+                  </div>
+                  <div class="drop-icon">
+                    <img alt="Sinal de lista" src="../../assets/arrow-down.png" />
+                  </div>
+                </div>
+                <div class="texts">
+                  <div class="texts-1">
+                    <p class="relevance">{{trendingMovies[15].vote_average | number:'1.2-2'}} Nota</p>
+                    <p>{{trendingMovies[15].adult ? +18 : -18}}</p>
+                    <p>{{trendingMovies[15].original_title.slice(0, 10)}} ...</p>
+                    <p>HD</p>
+                  </div>
+                  <div class="texts-2">
+                    <p>Peculiares * </p>
+                    <p> Alto-astral * </p>
+                    <p> Teen</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="image col-6 col-sm-4 col-md-3 col-lg-2" id="6" (mouseenter)="mouseOver($event)"
+              (mouseleave)="mouseOut($event)">
+              <div
+                [style.background-image]="'url(' + 'https://image.tmdb.org/t/p/w500' + trendingMovies[14].poster_path + ')'">
+              </div>
+
+              <div *ngIf="image6" [class.card-info]="image6">
+                <div class="video">
+                  <iframe width="100%" height="200" [src]="trendingMovies[14].linkVideo" frameborder="0" allowfullscreen
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                </div>
+
+                <div class="icons">
+                  <div class="three-icons">
+                    <div class="play-icon">
+                      <img alt="Imagem de play" src="../../assets/play-button.png" />
+                    </div>
+                    <div>
+                      <img alt="Sinal de mais" src="../../assets/plus.png" />
+                    </div>
+                    <div>
+                      <img alt="Sinal de mais" src="../../assets/like.png" />
+                    </div>
+                  </div>
+                  <div class="drop-icon">
+                    <img alt="Sinal de lista" src="../../assets/arrow-down.png" />
+                  </div>
+                </div>
+                <div class="texts">
+                  <div class="texts-1">
+                    <p class="relevance">{{trendingMovies[14].vote_average | number:'1.2-2'}} Nota</p>
+                    <p>{{trendingMovies[14].adult ? +18 : -18}}</p>
+                    <p>{{trendingMovies[14].original_title.slice(0, 10)}} ...</p>
+                    <p>HD</p>
+                  </div>
+                  <div class="texts-2">
+                    <p>Peculiares * </p>
+                    <p> Alto-astral * </p>
+                    <p> Teen</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="image col-6 col-sm-4 col-md-3 col-lg-2" id="7" (mouseenter)="mouseOver($event)"
+              (mouseleave)="mouseOut($event)">
+              <div
+                [style.background-image]="'url(' + 'https://image.tmdb.org/t/p/w500' + trendingMovies[13].poster_path + ')'">
+              </div>
+
+              <div *ngIf="image7" [class.card-info]="image7">
+                <div class="video">
+                  <iframe width="100%" height="200" [src]="trendingMovies[13].linkVideo" frameborder="0" allowfullscreen
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                </div>
+
+                <div class="icons">
+                  <div class="three-icons">
+                    <div class="play-icon">
+                      <img alt="Imagem de play" src="../../assets/play-button.png" />
+                    </div>
+                    <div>
+                      <img alt="Sinal de mais" src="../../assets/plus.png" />
+                    </div>
+                    <div>
+                      <img alt="Sinal de mais" src="../../assets/like.png" />
+                    </div>
+                  </div>
+                  <div class="drop-icon">
+                    <img alt="Sinal de lista" src="../../assets/arrow-down.png" />
+                  </div>
+                </div>
+                <div class="texts">
+                  <div class="texts-1">
+                    <p class="relevance">{{trendingMovies[13].vote_average | number:'1.2-2'}} Nota</p>
+                    <p>{{trendingMovies[13].adult ? +18 : -18}}</p>
+                    <p>{{trendingMovies[13].original_title.slice(0, 10)}} ...</p>
+                    <p>HD</p>
+                  </div>
+                  <div class="texts-2">
+                    <p>Peculiares * </p>
+                    <p> Alto-astral * </p>
+                    <p> Teen</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="image col-6 col-sm-4 col-md-3 col-lg-2" id="8" (mouseenter)="mouseOver($event)"
+              (mouseleave)="mouseOut($event)">
+              <div
+                [style.background-image]="'url(' + 'https://image.tmdb.org/t/p/w500' + trendingMovies[12].poster_path + ')'">
+              </div>
+
+              <div *ngIf="image8" [class.card-info]="image8">
+                <div class="video">
+                  <iframe width="100%" height="200" [src]="trendingMovies[12].linkVideo" frameborder="0" allowfullscreen
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                </div>
+
+                <div class="icons">
+                  <div class="three-icons">
+                    <div class="play-icon">
+                      <img alt="Imagem de play" src="../../assets/play-button.png" />
+                    </div>
+                    <div>
+                      <img alt="Sinal de mais" src="../../assets/plus.png" />
+                    </div>
+                    <div>
+                      <img alt="Sinal de mais" src="../../assets/like.png" />
+                    </div>
+                  </div>
+                  <div class="drop-icon">
+                    <img alt="Sinal de lista" src="../../assets/arrow-down.png" />
+                  </div>
+                </div>
+                <div class="texts">
+                  <div class="texts-1">
+                    <p class="relevance">96% relevante</p>
+                    <p class="relevance">{{trendingMovies[12].vote_average | number:'1.2-2'}} Nota</p>
+                    <p>{{trendingMovies[12].adult ? +18 : -18}}</p>
+                    <p>{{trendingMovies[12].original_title.slice(0, 10)}} ...</p>
+                    <p>HD</p>
+                  </div>
+                  <div class="texts-2">
+                    <p>Peculiares * </p>
+                    <p> Alto-astral * </p>
+                    <p> Teen</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+        <div class="icon-prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </div>
+      </a>
+      <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+        <div class="icon-next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="second-row">
+
+      <div class="movies-title">
+        <p>Populares na Netflix</p>
+        <div class="hidden-call">
+          <p>Ver tudo</p>
+          <img alt="Seta para ver tudo" src="../../assets/right-arrow.png" />
+        </div>
+      </div>
+      <div id="carouselIndicators2" class="carousel slide" data-ride="carousel" data-interval="false">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselIndicators2" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselIndicators2" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="image col-6 col-sm-4 col-md-3 col-lg-2" id="9" (mouseenter)="mouseOver($event)"
+                (mouseleave)="mouseOut($event)">
+                <div
+                  [style.background-image]="'url(' + 'https://image.tmdb.org/t/p/w500' + trendingMovies[11].poster_path + ')'">
+                </div>
+
+                <div *ngIf="image9" [class.card-info]="image9">
+                  <div class="video">
+                    <iframe width="100%" height="200" [src]="trendingMovies[11].linkVideo" frameborder="0"
+                      allowfullscreen
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                  </div>
+
+                  <div class="icons">
+                    <div class="three-icons">
+                      <div class="play-icon">
+                        <img alt="Imagem de play" src="../../assets/play-button.png" />
+                      </div>
+                      <div>
+                        <img alt="Sinal de mais" src="../../assets/plus.png" />
+                      </div>
+                      <div>
+                        <img alt="Sinal de mais" src="../../assets/like.png" />
+                      </div>
+                    </div>
+                    <div class="drop-icon">
+                      <img alt="Sinal de lista" src="../../assets/arrow-down.png" />
+                    </div>
+                  </div>
+                  <div class="texts">
+                    <div class="texts-1">
+                      <p class="relevance">{{trendingMovies[11].vote_average | number:'1.2-2'}} Nota</p>
+                      <p>{{trendingMovies[11].adult ? +18 : -18}}</p>
+                      <p>{{trendingMovies[11].original_title.slice(0, 10)}} ...</p>
+                      <p>HD</p>
+                    </div>
+                    <div class="texts-2">
+                      <p>Peculiares * </p>
+                      <p> Alto-astral * </p>
+                      <p> Teen</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="image col-6 col-sm-4 col-md-3 col-lg-2" id="10" (mouseenter)="mouseOver($event)"
+                (mouseleave)="mouseOut($event)">
+                <div
+                  [style.background-image]="'url(' + 'https://image.tmdb.org/t/p/w500' + trendingMovies[10].poster_path + ')'">
+                </div>
+
+                <div *ngIf="image10" [class.card-info]="image10">
+                  <div class="video">
+                    <iframe width="100%" height="200" [src]="trendingMovies[10].linkVideo" frameborder="0"
+                      allowfullscreen
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                  </div>
+
+                  <div class="icons">
+                    <div class="three-icons">
+                      <div class="play-icon">
+                        <img alt="Imagem de play" src="../../assets/play-button.png" />
+                      </div>
+                      <div>
+                        <img alt="Sinal de mais" src="../../assets/plus.png" />
+                      </div>
+                      <div>
+                        <img alt="Sinal de mais" src="../../assets/like.png" />
+                      </div>
+                    </div>
+                    <div class="drop-icon">
+                      <img alt="Sinal de lista" src="../../assets/arrow-down.png" />
+                    </div>
+                  </div>
+                  <div class="texts">
+                    <div class="texts-1">
+                      <p class="relevance">{{trendingMovies[10].vote_average | number:'1.2-2'}} Nota</p>
+                      <p>{{trendingMovies[10].adult ? +18 : -18}}</p>
+                      <p>{{trendingMovies[10].original_title.slice(0, 10)}} ...</p>
+                      <p>HD</p>
+                    </div>
+                    <div class="texts-2">
+                      <p>Peculiares * </p>
+                      <p> Alto-astral * </p>
+                      <p> Teen</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="image col-6 col-sm-4 col-md-3 col-lg-2" id="11" (mouseenter)="mouseOver($event)"
+                (mouseleave)="mouseOut($event)">
+                <div
+                  [style.background-image]="'url(' + 'https://image.tmdb.org/t/p/w500' + trendingMovies[9].poster_path + ')'">
+                </div>
+
+                <div *ngIf="image11" [class.card-info]="image11">
+                  <div class="video">
+                    <iframe width="100%" height="200" [src]="trendingMovies[9].linkVideo" frameborder="0"
+                      allowfullscreen
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                  </div>
+
+                  <div class="icons">
+                    <div class="three-icons">
+                      <div class="play-icon">
+                        <img alt="Imagem de play" src="../../assets/play-button.png" />
+                      </div>
+                      <div>
+                        <img alt="Sinal de mais" src="../../assets/plus.png" />
+                      </div>
+                      <div>
+                        <img alt="Sinal de mais" src="../../assets/like.png" />
+                      </div>
+                    </div>
+                    <div class="drop-icon">
+                      <img alt="Sinal de lista" src="../../assets/arrow-down.png" />
+                    </div>
+                  </div>
+                  <div class="texts">
+                    <div class="texts-1">
+                      <p class="relevance">{{trendingMovies[9].vote_average | number:'1.2-2'}} Nota</p>
+                      <p>{{trendingMovies[9].adult ? +18 : -18}}</p>
+                      <p>{{trendingMovies[9].original_title.slice(0, 10)}} ...</p>
+                      <p>HD</p>
+                    </div>
+                    <div class="texts-2">
+                      <p>Peculiares * </p>
+                      <p> Alto-astral * </p>
+                      <p> Teen</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="image col-6 col-sm-4 col-md-3 col-lg-2" id="12" (mouseenter)="mouseOver($event)"
+                (mouseleave)="mouseOut($event)">
+                <div
+                  [style.background-image]="'url(' + 'https://image.tmdb.org/t/p/w500' + trendingMovies[8].poster_path + ')'">
+                </div>
+
+                <div *ngIf="image12" [class.card-info]="image12">
+                  <div class="video">
+                    <iframe width="100%" height="200" [src]="trendingMovies[8].linkVideo" frameborder="0"
+                      allowfullscreen
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                  </div>
+
+                  <div class="icons">
+                    <div class="three-icons">
+                      <div class="play-icon">
+                        <img alt="Imagem de play" src="../../assets/play-button.png" />
+                      </div>
+                      <div>
+                        <img alt="Sinal de mais" src="../../assets/plus.png" />
+                      </div>
+                      <div>
+                        <img alt="Sinal de mais" src="../../assets/like.png" />
+                      </div>
+                    </div>
+                    <div class="drop-icon">
+                      <img alt="Sinal de lista" src="../../assets/arrow-down.png" />
+                    </div>
+                  </div>
+                  <div class="texts">
+                    <div class="texts-1">
+                      <p class="relevance">{{trendingMovies[8].vote_average | number:'1.2-2'}} Nota</p>
+                      <p>{{trendingMovies[8].adult ? +18 : -18}}</p>
+                      <p>{{trendingMovies[8].original_title.slice(0, 10)}} ...</p>
+                      <p>HD</p>
+                    </div>
+                    <div class="texts-2">
+                      <p>Peculiares * </p>
+                      <p> Alto-astral * </p>
+                      <p> Teen</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="image col-6 col-sm-4 col-md-3 col-lg-2" id="13" (mouseenter)="mouseOver($event)"
+                (mouseleave)="mouseOut($event)">
+                <div
+                  [style.background-image]="'url(' + 'https://image.tmdb.org/t/p/w500' + trendingMovies[7].poster_path + ')'">
+                </div>
+
+                <div *ngIf="image13" [class.card-info]="image13">
+                  <div class="video">
+                    <iframe width="100%" height="200" [src]="trendingMovies[7].linkVideo" frameborder="0"
+                      allowfullscreen
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                  </div>
+
+                  <div class="icons">
+                    <div class="three-icons">
+                      <div class="play-icon">
+                        <img alt="Imagem de play" src="../../assets/play-button.png" />
+                      </div>
+                      <div>
+                        <img alt="Sinal de mais" src="../../assets/plus.png" />
+                      </div>
+                      <div>
+                        <img alt="Sinal de mais" src="../../assets/like.png" />
+                      </div>
+                    </div>
+                    <div class="drop-icon">
+                      <img alt="Sinal de lista" src="../../assets/arrow-down.png" />
+                    </div>
+                  </div>
+                  <div class="texts">
+                    <div class="texts-1">
+                      <p class="relevance">{{trendingMovies[7].vote_average | number:'1.2-2'}} Nota</p>
+                      <p>{{trendingMovies[7].adult ? +18 : -18}}</p>
+                      <p>{{trendingMovies[7].original_title.slice(0, 10)}} ...</p>
+                      <p>HD</p>
+                    </div>
+                    <div class="texts-2">
+                      <p>Peculiares * </p>
+                      <p> Alto-astral * </p>
+                      <p> Teen</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="image col-6 col-sm-4 col-md-3 col-lg-2" id="14" (mouseenter)="mouseOver($event)"
+                (mouseleave)="mouseOut($event)">
+                <div
+                  [style.background-image]="'url(' + 'https://image.tmdb.org/t/p/w500' + trendingMovies[6].poster_path + ')'">
+                </div>
+
+                <div *ngIf="image14" [class.card-info]="image14">
+                  <div class="video">
+                    <iframe width="100%" height="200" [src]="trendingMovies[6].linkVideo" frameborder="0"
+                      allowfullscreen
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                  </div>
+
+                  <div class="icons">
+                    <div class="three-icons">
+                      <div class="play-icon">
+                        <img alt="Imagem de play" src="../../assets/play-button.png" />
+                      </div>
+                      <div>
+                        <img alt="Sinal de mais" src="../../assets/plus.png" />
+                      </div>
+                      <div>
+                        <img alt="Sinal de mais" src="../../assets/like.png" />
+                      </div>
+                    </div>
+                    <div class="drop-icon">
+                      <img alt="Sinal de lista" src="../../assets/arrow-down.png" />
+                    </div>
+                  </div>
+                  <div class="texts">
+                    <div class="texts-1">
+                      <p class="relevance">{{trendingMovies[6].vote_average | number:'1.2-2'}} Nota</p>
+                      <p>{{trendingMovies[6].adult ? +18 : -18}}</p>
+                      <p>{{trendingMovies[6].original_title.slice(0, 10)}} ...</p>
+                      <p>HD</p>
+                    </div>
+                    <div class="texts-2">
+                      <p>Peculiares * </p>
+                      <p> Alto-astral * </p>
+                      <p> Teen</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="image col-6 col-sm-4 col-md-3 col-lg-2" id="15" (mouseenter)="mouseOver($event)"
+                (mouseleave)="mouseOut($event)">
+                <div
+                  [style.background-image]="'url(' + 'https://image.tmdb.org/t/p/w500' + trendingMovies[5].poster_path + ')'">
+                </div>
+
+                <div *ngIf="image15" [class.card-info]="image15">
+                  <div class="video">
+                    <iframe width="100%" height="200" [src]="trendingMovies[5].linkVideo" frameborder="0"
+                      allowfullscreen
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                  </div>
+
+                  <div class="icons">
+                    <div class="three-icons">
+                      <div class="play-icon">
+                        <img alt="Imagem de play" src="../../assets/play-button.png" />
+                      </div>
+                      <div>
+                        <img alt="Sinal de mais" src="../../assets/plus.png" />
+                      </div>
+                      <div>
+                        <img alt="Sinal de mais" src="../../assets/like.png" />
+                      </div>
+                    </div>
+                    <div class="drop-icon">
+                      <img alt="Sinal de lista" src="../../assets/arrow-down.png" />
+                    </div>
+                  </div>
+                  <div class="texts">
+                    <div class="texts-1">
+                      <p class="relevance">{{trendingMovies[5].vote_average | number:'1.2-2'}} Nota</p>
+                      <p>{{trendingMovies[5].adult ? +18 : -18}}</p>
+                      <p>{{trendingMovies[5].original_title.slice(0, 10)}} ...</p>
+                      <p>HD</p>
+                    </div>
+                    <div class="texts-2">
+                      <p>Peculiares * </p>
+                      <p> Alto-astral * </p>
+                      <p> Teen</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="image col-6 col-sm-4 col-md-3 col-lg-2" id="16" (mouseenter)="mouseOver($event)"
+                (mouseleave)="mouseOut($event)">
+                <div
+                  [style.background-image]="'url(' + 'https://image.tmdb.org/t/p/w500' + trendingMovies[4].poster_path + ')'">
+                </div>
+
+                <div *ngIf="image16" [class.card-info]="image16">
+                  <div class="video">
+                    <iframe width="100%" height="200" [src]="trendingMovies[4].linkVideo" frameborder="0"
+                      allowfullscreen
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                  </div>
+
+                  <div class="icons">
+                    <div class="three-icons">
+                      <div class="play-icon">
+                        <img alt="Imagem de play" src="../../assets/play-button.png" />
+                      </div>
+                      <div>
+                        <img alt="Sinal de mais" src="../../assets/plus.png" />
+                      </div>
+                      <div>
+                        <img alt="Sinal de mais" src="../../assets/like.png" />
+                      </div>
+                    </div>
+                    <div class="drop-icon">
+                      <img alt="Sinal de lista" src="../../assets/arrow-down.png" />
+                    </div>
+                  </div>
+                  <div class="texts">
+                    <div class="texts-1">
+                      <p class="relevance">{{trendingMovies[4].vote_average | number:'1.2-2'}} Nota</p>
+                      <p>{{trendingMovies[4].adult ? +18 : -18}}</p>
+                      <p>{{trendingMovies[4].original_title.slice(0, 10)}} ...</p>
+                      <p>HD</p>
+                    </div>
+                    <div class="texts-2">
+                      <p>Peculiares * </p>
+                      <p> Alto-astral * </p>
+                      <p> Teen</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselIndicators2" role="button" data-slide="prev">
+          <div class="icon-prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </div>
+        </a>
+        <a class="carousel-control-next" href="#carouselIndicators2" role="button" data-slide="next">
+          <div class="icon-next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

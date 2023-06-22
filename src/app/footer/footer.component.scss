@@ -1,0 +1,45 @@
+.main-box{
+    background-color: #141414;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-bottom: 8px;
+    display: flex;
+
+    .content{
+        margin: auto;
+        display: inline-block;
+    }
+}
+
+.social-icons{
+    padding-top: 32px;
+    color: white;
+    display: flex;
+    gap: 32px;
+
+    svg{
+        height: 40px;
+    }
+}
+
+.general-topics{
+    color: #808080;
+    display: flex;
+    gap: 80px;
+    margin-bottom:16px;
+}
+
+.bottom-box{
+    color: #808080;
+
+    div{
+        border: 1px solid #808080;
+        display: inline-block;
+        padding: 8px;
+        margin-bottom:16px;
+        
+        p{
+            margin: 0;
+        }
+    }
+}

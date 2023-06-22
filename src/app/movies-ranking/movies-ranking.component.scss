@@ -1,0 +1,263 @@
+.main-box {
+    padding-left: 40px;
+}
+
+.movies-title {
+    display: flex;
+    align-items: center;
+
+    p {
+        color: rgb(202, 201, 201);
+        font-weight: bold;
+        margin: 0;
+        font-size: 1.4vw;
+    }
+}
+
+.carousel-item {
+    gap: 0;
+    height: 400px;
+}
+
+.row {
+    position: relative;
+}
+
+.image {
+    padding-bottom: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    gap: 10px;
+
+    svg {
+        height: 200px;
+        width: 60%;
+    }
+
+    div {
+        margin: auto 0;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 300px;
+        width: 80%;
+        margin: 0;
+        border-radius: 5px;
+    }
+}
+
+.card-info {
+    position: absolute;
+    top: 30px;
+    height: 100px;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    transition: 0.3s;
+    left: 40px;
+    transform: scale(1.2);
+    z-index: 10000;
+    background-color: #141414;
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 5px 19px -12px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 1px 5px 19px -12px rgba(0, 0, 0, 1);
+    box-shadow: 1px 5px 19px -12px rgba(0, 0, 0, 1);
+
+    .video {
+        width: 100%;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+        width: 100%;
+
+        .three-icons {
+            display: flex;
+            gap: 3px;
+            height: auto;
+
+            .play-icon {
+                background-color: white;
+            }
+
+            div {
+                height: 35px;
+                width: 35px;
+                border: 1px solid grey;
+                border-radius: 25px;
+                display: flex;
+                justify-content: center;
+
+                img {
+                    height: 15px;
+                    margin: auto;
+                }
+            }
+        }
+
+        .drop-icon {
+            height: 35px;
+            width: 35px;
+            border: 1px solid grey;
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+
+            img {
+                height: 15px;
+                margin: auto;
+            }
+        }
+    }
+
+    .texts {
+        display: flex;
+        flex-direction: column;
+        padding-left: 15px;
+        width: 100%;
+
+        .texts-1 {
+            display: flex;
+            align-items: center;
+            color: white;
+            justify-content: left;
+            height: auto;
+            gap: 3px;
+
+            .relevance {
+                color: green;
+                font-weight: bold;
+                font-size: 0.9rem;
+                margin: 0;
+            }
+
+            .age {
+                background-color: rgb(255, 123, 0);
+                font-size: 16px;
+            }
+
+            p {
+                margin: 0;
+                font-size: 13px;
+            }
+        }
+
+        .texts-2 {
+            display: flex;
+            color: white;
+            justify-content: left;
+            height: auto;
+
+            p {
+                margin: 0;
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+
+.carousel-indicators {
+    position: relative;
+    justify-content: right;
+    width: 80%;
+
+    li {
+        width: 16px;
+        margin: 0;
+        margin-left: 2px;
+    }
+}
+
+.main-box {
+    background-color: #141414;
+}
+
+.icon-prev {
+    display: none;
+}
+
+.carousel-control-prev {
+    margin: auto;
+    width: 50px;
+    background-color: rgba(0, 0, 0, 0.362);
+    height: 70%;
+    margin-top: 20px;
+}
+
+.carousel-control-prev:hover {
+
+    .icon-prev {
+        display: block;
+    }
+}
+
+.icon-next {
+    display: none;
+}
+
+.carousel-control-next {
+    width: 50px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.362);
+    height: 70%;
+    margin-top: 20px;
+}
+
+.carousel-control-next:hover {
+
+    .icon-next {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1650px) {
+    .card-info {
+
+        .icons {
+
+            .three-icons {
+    
+                div {
+                    height: 30px;
+                    width: 30px;
+    
+                    img {
+                        height: 10px;
+                    }
+                }
+            }
+    
+            .drop-icon {
+                height: 30px;
+                width: 30px;
+    
+                img {
+                    height: 10px;
+                }
+            }
+        }
+    
+        .texts {
+    
+            .texts-1 {
+    
+                .relevance {
+                    font-size: 0.7rem;
+                }
+    
+                p {
+                    font-size: 10px;
+                }
+            }
+    
+            .texts-2 {
+                p {
+                    font-size: 0.6rem;
+                }
+            }
+        }
+    }
+  }
